@@ -1,3 +1,40 @@
 #title {
     font-family: 'Montserrat', sans-serif;
 }
+html {
+    height: 100%;
+}
+.container{
+background: rgba(255, 255, 255, 0.5);;
+
+}
+.jumbotron{
+   text-align: center;
+   font-weight: bold;
+   font-size:30px;
+   color:#888;
+   background:transparent;
+   text-transform: uppercase;
+
+}
+
+body{
+   /* background:#111; */
+   background: linear-gradient( #d966ff, #fff);
+   height: 100%;
+   margin: 0;
+   background-repeat: no-repeat;
+   background-attachment: fixed;
+}
+
+.input-group{
+   width:500px; margin:0 auto;
+   text-align: center;
+}
+
+.col{
+   font-size:20px;
+   font-weight: bold;
+   float:left;
+
+}
