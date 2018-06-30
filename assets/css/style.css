@@ -1,3 +1,58 @@
-#title {
-    font-family: 'Montserrat', sans-serif;
+
+body {
+
+    margin-bottom: 110px;
+    background-color: #eeeeee; 
+    font-family: 'Oxygen', sans-serif;
+}
+
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+.jumbotron {
+
+    background: linear-gradient( to right, #897292, #3E78B2, #D8BFD8, #fb88ff);
+ 
+}
+
+.info-box {
+    padding: 25px;
+    border: 1px solid #bbbbbb;
+    background-color: white;
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 60px;
+    line-height: 60px;
+    background: linear-gradient( to left, #897292, #3E78B2,	#D8BFD8, #fb88ff);
+    margin-top: 50px;
+}
+
+.footer-text {
+    color: #000;
+    font-weight: bold;
+    font-style: italic;
+}
+.input-group{
+    width:700px; margin:0 auto;
+    text-align: center;
+}
+
+.btn-default{
+    
+    border: none;
+    background: none;
+    font-weight: bold;
+
+}
+
+.btn:hover {
+    -webkit-animation: pulse 1s;
+    animation: pulse 1s;
 }
