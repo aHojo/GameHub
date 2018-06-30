@@ -1,19 +1,29 @@
-console.log("main.js loaded");
+var ofAge = false;
+var gameName;
+var filterLimit = 3;
 
-// Initialize Firebase
-try {
-    var config = firebaseConfig;
-    firebase.initializeApp(config);
-    db = firebase.database();
-    console.log('Successfully initialized database');
-} catch {
-    console.log('Failed to initialize database');
-}
+$(document).ready(function() {
+        $('.modal').modal({
+            keyboard: false,
+            backdrop: 'static'
+        });
+        $('.modal').modal('show');
 
-// Delete this out - just for reference
-var title = $('#title');
-var wink = $('#wink');
-title.css('text-align', 'center');
-wink.css('height', '30px');
+        $('#ofAgeCheck').on("click", function(){
+            if (this.checked) {
+                ofAge = true;
+                console.log("Checked");
+            } else {
+                ofAge = false;
+                console.log("Unchecked");
+            }
+        });
 
-// Go nuts
+
+        $('#ofAgeBtn').on("click", function() {
+            if(ofAge){
+                $('.modal').modal('hide')
+            }
+        });
+})
+

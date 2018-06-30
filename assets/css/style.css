@@ -1,4 +1,3 @@
-
 body {
 
     margin-bottom: 110px;
@@ -6,16 +5,15 @@ body {
     font-family: 'Oxygen', sans-serif;
 }
 
-
 html {
     position: relative;
     min-height: 100%;
 }
 
+
 .jumbotron {
 
     background: linear-gradient( to right, #897292, #3E78B2, #D8BFD8, #fb88ff);
- 
 }
 
 .info-box {
@@ -56,3 +54,4 @@ html {
     -webkit-animation: pulse 1s;
     animation: pulse 1s;
 }
+
