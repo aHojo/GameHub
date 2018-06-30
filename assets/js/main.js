@@ -3,11 +3,27 @@ var gameName;
 var filterLimit = 3;
 
 $(document).ready(function() {
-    $('.modal').modal('show');
-    $('#changebtn').on("click", function() {
-        ofAge = true;
-        console.log("Changed the Variables");
-    })
+        $('.modal').modal({
+            keyboard: false,
+            backdrop: 'static'
+        });
+        $('.modal').modal('show');
 
+        $('#ofAgeCheck').on("click", function(){
+            if (this.checked) {
+                ofAge = true;
+                console.log("Checked");
+            } else {
+                ofAge = false;
+                console.log("Unchecked");
+            }
+        });
+
+
+        $('#ofAgeBtn').on("click", function() {
+            if(ofAge){
+                $('.modal').modal('hide')
+            }
+        });
 })
 
