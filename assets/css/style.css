@@ -16,6 +16,7 @@ body {
     background-color: #1465F9;
 }
 
+
 .info-box {
     padding: 25px;
     border: 1px solid #bbbbbb;
@@ -32,6 +33,22 @@ body {
     margin-top: 50px;
 }
 
-.footer-text {
+.nav-link {
     color: white;
+}
+
+    a:link {
+
+}
+
+    a:visited {
+
+}
+
+    a:hover {
+
+}
+
+    a:active {
+        color: purple;
 }
