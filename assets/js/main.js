@@ -78,10 +78,6 @@ function gameName() {
                     searches.addClass('games');
                     searches.attr('data-appid', matches[i].appid);
                     searches.attr('data-name', matches[i].name);
-                    // searches.text(matches[i].name);
-                    // searches.addClass('games');
-                    // searches.attr('data-appid', matches[i].appid);
-                    // searches.attr('data-name', matches[i].name);
                     $("#search-content").append(searches);
                 }
             }
@@ -145,17 +141,6 @@ const getAppInfo = function(response) {
     $('#gameurl').text(`Dev Website: ${steamWeb}`);
     $('#gameprice').text(`Price: ${steamPrice}`);
     $('#requirements').html(`System Requirements: ${steamReqs}`);
-
-
-    // $('#gameDiv').append(
-    //     $('<div>').text(steamInfo.name),
-    //     $('<div>').text(steamInfo.metacritic.score),
-    //     $('<div>').text(steamInfo.required_age),
-    //     $('<div>').text(steamAbout),
-    //     $('<img>').attr('src', steamInfo.header_image),
-    //     $('div').attr('src', steamScreenshot)
-
-    // )
     $('#search-modal').modal('hide');
 }
 
