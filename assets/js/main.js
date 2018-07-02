@@ -78,10 +78,10 @@ function gameName() {
                     searches.addClass('games');
                     searches.attr('data-appid', matches[i].appid);
                     searches.attr('data-name', matches[i].name);
-                    searches.text(matches[i].name);
-                    searches.addClass('games');
-                    searches.attr('data-appid', matches[i].appid);
-                    searches.attr('data-name', matches[i].name);
+                    // searches.text(matches[i].name);
+                    // searches.addClass('games');
+                    // searches.attr('data-appid', matches[i].appid);
+                    // searches.attr('data-name', matches[i].name);
                     $("#search-content").append(searches);
                 }
             }
