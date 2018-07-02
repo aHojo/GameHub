@@ -55,3 +55,11 @@ html {
     animation: pulse 1s;
 }
 
+/* search modal css */
+.games {
+    margin: 10px;
+    border: 2px solid red;
+}
+.games:hover {
+    background: red;
+}
