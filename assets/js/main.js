@@ -1,10 +1,11 @@
 var ofAge = false;
 var content = [];
-var gameName;
+var matches = [];
 
 //API VARIABLES
 const STEAM = "https://store.steampowered.com/api/appdetails/?appids=";
 var appID;
+var appIDForLink;
 
 $(document).ready(function() {
         $('#ofAgeModal').modal({
@@ -50,27 +51,41 @@ for (let i = 0; i < steamApps.applist.apps.length; i++){
 function gameName() {
     var game = $("#game-search").val().trim();
     var gameSearch = game.split(' ').join("\\s");
-    var gameSearchFull = '\\b^'+ gameSearch +'$\\b';
     console.log(gameSearch);
     var search = new RegExp(gameSearch, 'i');
-    var search1 = new RegExp(gameSearchFull, 'i');
     console.log(search);
+    matches = [];
+    $("#search-content").empty();
     for (let i = 0; i < content.length; i++) {
         if(content[i].name.match(search)) {
-            console.log('Name:' + content[i].name + "\n" + "Appid: " + content[i].appid);
-           var searches = $('<div>')
-           searches.text(content[i].name);
-           searches.addClass('games');
-           searches.attr('data-appid', content[i].appid);
-           searches.attr('data-name', content[i].name);
-            $("#search-content").append(searches);
+            matches.push(content[i]);
         }
     }
-    for (let i = 0; i < content.length; i++) {
-        if(content[i].name.match(search1)) {
-            console.log('Name BEST MATCH: ' + content[i].name + "\n" + "Appid: " + content[i].appid);
-        }
+
+    for(let i = 0; i < matches.length; i ++){
+        appIDForLink = matches[i].appid;
+        $.ajax({
+            url: STEAM + appIDForLink,
+            method: "GET",
+            success: function(response) {
+                console.log(response);
+                console.log('Name:' + matches[i].name + "\n" + "Appid: " + matches[i].appid);
+                var steamLink = response[matches[i].appid].data;
+                // console.log("SteamLink" + steamLink.name);
+                if(steamLink){
+                    var searches = $('<div>');
+                    searches.html(`${steamLink.name} <br /> ${steamLink.short_description}`);
+                    searches.addClass('games');
+                    searches.attr('data-appid', matches[i].appid);
+                    searches.attr('data-name', matches[i].name);
+                    $("#search-content").append(searches);
+                }
+            }
+        })
     }
+
+
+
 };
 
 var displaySearchContent = function() {
@@ -91,27 +106,27 @@ const getAppInfo = function(response) {
     var steamName = steamInfo.name;
     var steamLogo = steamInfo.header_image;
     var steamAge = steamInfo.required_age;
-    
+
     var steamScreenshot = steamInfo.screenshots[0].path_full;
     var steamScreenshot1 = steamInfo.screenshots[1].path_full;
     var steamScreenshot2 = steamInfo.screenshots[2].path_full;
-    var steamAbout = steamInfo.about_the_game;
+    var steamAbout = steamInfo.short_description;
     var steamPrice = steamInfo.price_overview.final + steamInfo.price_overview.currency;
     var steamWeb = steamInfo.website;
-    var steamReqs = steamInfo.pc_requirements.recommended;
+    var steamReqs = steamInfo.pc_requirements.minimum;
     console.log(steamInfo);
     console.log(steamName);
     console.log(steamPrice);
     console.log(steamAge);
     console.log(steamWeb);
 
-    if(steamInfo.metacritic.score !== "undefined"){
+    if(steamInfo.hasOwnProperty('metacritic.score')){
         var steamScore = steamInfo.metacritic.score;
     } else {
         var steamScore = "No Score Available"
     }
 
-    if(steamInfo.movies !== "undefined") {
+    if(steamInfo.hasOwnProperty('movies')) {
         var steamMovie = steamInfo.movies[0].webm.max;
     }
 
@@ -126,24 +141,13 @@ const getAppInfo = function(response) {
     $('#gameurl').text(`Dev Website: ${steamWeb}`);
     $('#gameprice').text(`Price: ${steamPrice}`);
     $('#requirements').html(`System Requirements: ${steamReqs}`);
-    
-
-    // $('#gameDiv').append(
-    //     $('<div>').text(steamInfo.name),
-    //     $('<div>').text(steamInfo.metacritic.score),
-    //     $('<div>').text(steamInfo.required_age),
-    //     $('<div>').text(steamAbout),
-    //     $('<img>').attr('src', steamInfo.header_image),
-    //     $('div').attr('src', steamScreenshot)
-
-    // )
     $('#search-modal').modal('hide');
 }
 
 
 //clicking on a search item
 $("#search-modal").on("click", '.games', function() {
-    
+
     appID = $(this).attr('data-appid');
 
     $.ajax({
