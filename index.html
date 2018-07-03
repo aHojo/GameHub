@@ -11,19 +11,42 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.css">
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="assets/css/animate.css">
    
     <title>GameHub</title>
 <style>
     body {
-
-margin-bottom: 110px;
-background-color: #eeeeee; 
-font-family: 'Oxygen', sans-serif;
-}
+        margin-bottom: 110px;
+        background-color: #eeeeee; 
+        font-family: 'Oxygen', sans-serif;
+    }
 </style>
 </head>
 
 <body>
+    <header>
+        <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="index.html">Search</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+                <button class="btn btn-outline">Wishlist</button>
+            </div>
+        </nav>
+    </header>
+
+
     <!-- Modal to confirm the age. -->
     <div id="ofAgeModal" class="modal" tabindex="-1" role="dialog">
         <div class="modal-dialog" role="document">
@@ -65,7 +88,7 @@ font-family: 'Oxygen', sans-serif;
     
     <div class="container">
         <div class="row mt-5">
-            <div class="col-12 col-md-8">
+            <div class="col-12 col-md-8 info-box">
                 <h1 id="gametitle">-GameTitle</h1>
                 <h2 id="metacritic">-metacritic</h2>
                 <h2 id="age">-age</h2>
@@ -121,7 +144,7 @@ font-family: 'Oxygen', sans-serif;
     <footer class="footer">
         <div class="container">
             <span class="footer-text">
-                <ul class="nav justify-content-end""row mb-10">
+                <ul class="nav justify-content-end row mb-10">
                     <li class="nav-item">
                         <a class="nav-link active" href="index.html">Search</a>
                     </li>
