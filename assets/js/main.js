@@ -8,28 +8,32 @@ var appID;
 var appIDForLink;
 
 $(document).ready(function() {
+    if(!JSON.parse(localStorage.getItem('ofAge'))){
         $('#ofAgeModal').modal({
             keyboard: false,
             backdrop: 'static'
         });
         $('#ofAgeModal').modal('show');
 
-        $('#ofAgeCheck').on("click", function(){
-            if (this.checked) {
-                ofAge = true;
-                console.log("Checked");
-            } else {
-                ofAge = false;
-                console.log("Unchecked");
-            }
-        });
+            $('#ofAgeCheck').on("click", function(){
+                if (this.checked) {
+                    localStorage.setItem("ofAge", true);
+                    // ofAge = true;
+                    console.log("Checked");
+                } else {
+                    // ofAge = false;
+                    localStorage.setItem("ofAge", false);
+                    console.log("Unchecked");
+                }
+            });
 
 
-        $('#ofAgeBtn').on("click", function() {
-            if(ofAge){
-                $('#ofAgeModal').modal('hide')
-            }
-        });
+            $('#ofAgeBtn').on("click", function() {
+                if(JSON.parse(localStorage.getItem('ofAge'))){
+                    $('#ofAgeModal').modal('hide')
+                }
+            });
+    }
 })
 
 
@@ -74,10 +78,20 @@ function gameName() {
                 // console.log("SteamLink" + steamLink.name);
                 if(steamLink){
                     var searches = $('<div>');
-                    searches.html(`${steamLink.name} <br /> ${steamLink.short_description}`);
+                    var anchor = $('<a>');
+                    var p = $('<p>');
+                    searches.addClass("card");
+                    anchor.text(`${steamLink.name}`);
+                    p.text(`${steamLink.short_description}`)
+                    anchor.addClass("card-header game-link");
+                    anchor.attr('data-appid', matches[i].appid);
+                    anchor.attr('data-name', matches[i].name);
+                    p.addClass("card-text");
+                    // searches.html(`${steamLink.name} <br /> ${steamLink.short_description}`);
+                    searches.append(anchor, p);
                     searches.addClass('games');
-                    searches.attr('data-appid', matches[i].appid);
-                    searches.attr('data-name', matches[i].name);
+                    // searches.attr('data-appid', matches[i].appid);
+                    // searches.attr('data-name', matches[i].name);
                     $("#search-content").append(searches);
                 }
             }
@@ -146,7 +160,7 @@ const getAppInfo = function(response) {
 
 
 //clicking on a search item
-$("#search-modal").on("click", '.games', function() {
+$("#search-modal").on("click", '.game-link', function() {
 
     appID = $(this).attr('data-appid');
 
