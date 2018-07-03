@@ -156,6 +156,20 @@ const getAppInfo = function(response) {
     $('#gameprice').text(`Price: ${steamPrice}`);
     $('#requirements').html(`System Requirements: ${steamReqs}`);
     $('#search-modal').modal('hide');
+
+    
+    if (steamScore >= 75) {
+        document.getElementById("metacritic").style.backgroundColor = 'green';
+        }
+    else if (steamScore <= 60) {
+       document.getElementById("metacritic").style.backgroundColor = 'yellow';
+       }  
+    else if (steamScore <= 50) {
+       document.getElementById("metacritic").style.backgroundColor = 'red';
+       }  
+    else {
+    document.getElementById("metacritic").style.backgroundColor = '#fff';
+    }
 }
 
 
