@@ -1,5 +1,7 @@
-#title {
-    font-family: 'Montserrat', sans-serif;
+body {
+    margin-bottom: 110px;
+    background-color: #eeeeee; 
+    font-family: 'Oxygen', sans-serif;
 }
 
 html {
@@ -7,14 +9,10 @@ html {
     min-height: 100%;
 }
 
-body {
-    margin-bottom: 110px;
-    background-color: #eeeeee;
+.jumbotron {
+    background: linear-gradient( to right, #897292, #3E78B2, #D8BFD8, #fb88ff);
 }
 
-.jumbotron {
-    background-color: #1465F9;
-}
 
 .info-box {
     padding: 25px;
@@ -27,11 +25,90 @@ body {
     bottom: 0;
     width: 100%;
     height: 60px;
-    line-height: 60px;
-    background-color: #1465F9;
-    margin-top: 50px;
+
+    background: linear-gradient( to left, #897292, #3E78B2,	#D8BFD8, #fb88ff);
+
+}
+
+.nav-link {
+    color: white;
+}
+
+    a:link {
+
+}
+
+    a:visited {
+
+}
+
+    a:hover {
+
+}
+
+    a:active {
+        color: purple;
 }
 
 .footer-text {
+    color: #000;
+    font-weight: bold;
+    font-style: italic;
+    line-height: 40px;
+}
+.input-group{
+    width:700px; margin:0 auto;
+    text-align: center;
+}
+
+.btn-default{
+    
+    border: none;
+    background: none;
+    font-weight: bold;
+
+}
+
+.btn:hover {
+    -webkit-animation: pulse 1s;
+    animation: pulse 1s;
+}
+
+/*contactpage*/
+.contacthead {
+    font-size: 36px;
+    font-family: 'Oxygen', sans-serif;
+    font-style: bold;
+    color: #3E78B2;
+}
+
+.form-group {
+    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;
+    color: #897292;
+}
+
+.contactsubmit {
+    font-size: 16px;
+    font-family: 'Oxygen', sans-serif;
     color: white;
+    background-color: #3E78B2;
+    float: right;
+}
+
+/*about page*/
+.aboutheader {
+    font-size: 36px;
+    font-family: 'Oxygen', sans-serif;
+    font-style: bold;
+    color: #3E78B2;
+}
+
+/* search modal css */
+.games {
+    margin: 10px;
+    border: 2px solid red;
+}
+.games:hover {
+    background: red;
 }
