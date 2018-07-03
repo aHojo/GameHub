@@ -105,10 +105,72 @@ html {
 }
 
 /* search modal css */
-.games {
+/* .games {
     margin: 10px;
     border: 2px solid red;
 }
 .games:hover {
     background: red;
+} */
+
+/* modal style */
+.modal {
+    display:none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.5)
+}
+#ofAgeModalContent{
+    background-color: #f4f4f4;
+    margin: 20% auto;
+    /* padding: 20px; */
+    width: 70%;
+    box-shadow: 0 5px 8px 0 rgba(0,0,0,0.2),0 7px 20px 0 rgba(0, 0, 0, 0.17);
+    animation-name: modalopen;
+    animation-duration: 1s;
+}
+.modal-header{
+    background-color: coral;
+    padding: 15px;
+    color: white;
+}
+.modal-body {
+    padding: 10px 20px;
+}
+#ofAgeBtn{
+    text-align: center;
+    background: #3E78B2;
+    padding: 1em 2em;
+    color: white;
+    border:1px solid white;
+}
+.modal-footer{
+    background-color: coral;
+    padding: 10px;
+    color:white;
+    text-align: center;
+}
+
+#ofAgeBtn:hover{
+    background: black;
+}
+
+.card-header {
+    color: #0000EE !important;
+}
+
+.card-text {
+    margin: 10px 0px 5px 10px;
+}
+
+.card-header:hover {
+    text-decoration: underline !important;
+    cursor: pointer;
+}
+.games {
+    margin: 10px;
 }
