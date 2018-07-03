@@ -40,7 +40,7 @@ $(document).ready(function() {
 
 //Display for the steam games.
 for (let i = 0; i < steamApps.applist.apps.length; i++){
-    var deleteObj = /\b(beta|trailer|movie|demo|teaser|server|DLC|map\spack|pack|multiplayer\sskins|weapons\spack|weapons\sskins|starter\spack|premium\spack|pre.*order|sdk|player\sprofiles|Workshop|creation\sclub|texture\spack)\b/gi;
+    var deleteObj = /\b(beta|trailer|movie|demo|teaser|server|DLC|map\spack|pack|multiplayer\sskins|weapons\spack|weapons\sskins|starter\spack|premium\spack|pre.*order|sdk|player\sprofiles|Workshop|creation\sclub|texture\spack|game\ssoundtrack)\b/gi;
     var deleteObj2 = /\bRU\b/g;
     if (deleteObj.test(steamApps.applist.apps[i].name) || deleteObj2.test(steamApps.applist.apps[i].name)) {
         delete steamApps.applist.apps[i];
@@ -134,7 +134,7 @@ const getAppInfo = function(response) {
     console.log(steamAge);
     console.log(steamWeb);
 
-    if(steamInfo.hasOwnProperty('metacritic.score')){
+    if(steamInfo.hasOwnProperty('metacritic')){
         var steamScore = steamInfo.metacritic.score;
     } else {
         var steamScore = "No Score Available"
