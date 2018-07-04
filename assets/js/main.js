@@ -154,16 +154,16 @@ const getAppInfo = function(response) {
     $('#requirements').html(`System Requirements: ${steamReqs}`);
     $('#search-modal').modal('hide');
 
-    
+
     if (steamScore >= 75) {
         document.getElementById("metacritic").style.backgroundColor = 'green';
         }
     else if (steamScore <= 60) {
        document.getElementById("metacritic").style.backgroundColor = 'yellow';
-       }  
+       }
     else if (steamScore <= 50) {
        document.getElementById("metacritic").style.backgroundColor = 'red';
-       }  
+       }
     else {
     document.getElementById("metacritic").style.backgroundColor = '#fff';
     }
@@ -192,4 +192,17 @@ $("#search-modal").on("click", '.game-link', function() {
 //close the search modal
 $('#close-btn').on("click", function() {
     $('#search-modal').modal('hide');
+})
+
+//wishilist/recentsearch click
+$(document).on('click', '.wishlist', function() {
+    console.log("clicked on wishlist " + $(this).attr('data-appid'));
+
+    appID = $(this).attr('data-appid');
+
+    // var wishID = $(this).attr('data-appid');
+    $.ajax({
+        url: STEAM + appID,
+        method: "GET",
+    }).then(getAppInfo);
 })
