@@ -167,6 +167,8 @@ const getAppInfo = function(response) {
     else {
     document.getElementById("metacritic").style.backgroundColor = '#fff';
     }
+
+    $("#main-container").show();
 }
 
 
