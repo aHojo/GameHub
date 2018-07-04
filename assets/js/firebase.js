@@ -12,13 +12,13 @@
           var dataRef = firebase.database();
 
     dataRef.ref().on("child_added", function (childSnapshot){
-    
-    
+
+
       var gameID = childSnapshot.val().name;
       var searchedID = childSnapshot.val().appid;
-  
+
              $("#pre-Search").append(`
-          <span> <a href="#" data-name=${gameID} data-appid=${searchedID}> ${gameID} </a></span>`);
-     
-         
+          <span> <a href="#" class='wishlist' data-name=${gameID} data-appid=${searchedID}> ${gameID} </a></span>`);
+
+
          });
