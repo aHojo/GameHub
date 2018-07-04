@@ -174,3 +174,7 @@ html {
 .games {
     margin: 10px;
 }
+
+#close-btn:hover {
+    cursor: pointer;
+}

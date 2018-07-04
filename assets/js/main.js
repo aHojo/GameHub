@@ -1,6 +1,7 @@
 var ofAge = false;
 var content = [];
 var matches = [];
+var steamPrevious;
 
 //API VARIABLES
 const STEAM = "https://store.steampowered.com/api/appdetails/?appids=";
@@ -60,12 +61,15 @@ function gameName() {
     console.log(search);
     matches = [];
     $("#search-content").empty();
+    $('#game-search').empty();
     for (let i = 0; i < content.length; i++) {
         if(content[i].name.match(search)) {
             matches.push(content[i]);
         }
     }
-
+    if(matches.length === 0){
+        $("#search-content").html(`<h2>I'm sorry, ${game} is not in our library.</h2>`)
+    }
     for(let i = 0; i < matches.length; i ++){
         appIDForLink = matches[i].appid;
         $.ajax({
@@ -103,10 +107,6 @@ function gameName() {
 };
 
 var displaySearchContent = function() {
-    $('#search-modal').modal({
-        keyboard: false,
-        backdrop: 'static'
-    });
     $('#search-modal').modal('show');
     gameName();
 
@@ -117,6 +117,7 @@ $("#search-button").on("click", displaySearchContent)
 //making the api call to steam
 const getAppInfo = function(response) {
     var steamInfo = response[appID].data;
+    var steamAppId = appID;
     var steamName = steamInfo.name;
     var steamLogo = steamInfo.header_image;
     var steamAge = steamInfo.required_age;
@@ -128,11 +129,7 @@ const getAppInfo = function(response) {
     var steamPrice = steamInfo.price_overview.final + steamInfo.price_overview.currency;
     var steamWeb = steamInfo.website;
     var steamReqs = steamInfo.pc_requirements.minimum;
-    console.log(steamInfo);
-    console.log(steamName);
-    console.log(steamPrice);
-    console.log(steamAge);
-    console.log(steamWeb);
+    console.log("Steam App Id" + steamAppId);
 
     if(steamInfo.hasOwnProperty('metacritic')){
         var steamScore = steamInfo.metacritic.score;
@@ -144,7 +141,7 @@ const getAppInfo = function(response) {
         var steamMovie = steamInfo.movies[0].webm.max;
     }
 
-    $("#gametitle").text(steamName);
+    $("#gametitle").attr({"data-name": steamName, "data-appid": steamAppId}).text(steamName);
     $("#metacritic").text(`Metacritic Score: ${steamScore}`);
     $("#age").text(`Required Age: ${steamAge}`);
     $('#headerimg').attr('src', steamLogo);
@@ -163,7 +160,9 @@ const getAppInfo = function(response) {
 $("#search-modal").on("click", '.game-link', function() {
 
     appID = $(this).attr('data-appid');
+    steamPrevious = $(this).attr('data-name');
 
+    console.log(`APPID: ${appID} and NAME: ${steamPrevious}`);
     $.ajax({
         url: STEAM + appID,
         method: "GET",
@@ -173,3 +172,8 @@ $("#search-modal").on("click", '.game-link', function() {
         console.log("index: " + index);
     });
 });
+
+//close the search modal
+$('#close-btn').on("click", function() {
+    $('#search-modal').modal('hide');
+})
