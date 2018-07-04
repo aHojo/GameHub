@@ -153,6 +153,20 @@ const getAppInfo = function(response) {
     $('#gameprice').text(`Price: ${steamPrice}`);
     $('#requirements').html(`System Requirements: ${steamReqs}`);
     $('#search-modal').modal('hide');
+
+    
+    if (steamScore >= 75) {
+        document.getElementById("metacritic").style.backgroundColor = 'green';
+        }
+    else if (steamScore <= 60) {
+       document.getElementById("metacritic").style.backgroundColor = 'yellow';
+       }  
+    else if (steamScore <= 50) {
+       document.getElementById("metacritic").style.backgroundColor = 'red';
+       }  
+    else {
+    document.getElementById("metacritic").style.backgroundColor = '#fff';
+    }
 }
 
 
@@ -160,9 +174,11 @@ const getAppInfo = function(response) {
 $("#search-modal").on("click", '.game-link', function() {
 
     appID = $(this).attr('data-appid');
-    steamPrevious = $(this).attr('data-name');
-
-    console.log(`APPID: ${appID} and NAME: ${steamPrevious}`);
+   steamPrevious = $(this).attr('data-name');
+   dataRef.ref().push({
+       name: steamPrevious,
+       appid: appID
+   })
     $.ajax({
         url: STEAM + appID,
         method: "GET",
