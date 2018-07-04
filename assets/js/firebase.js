@@ -10,28 +10,15 @@
           };
           firebase.initializeApp(config);
           var dataRef = firebase.database();
-          $("#search-button").on("click", function(e){
-        event.preventDefault();
-    
-        var search = "";
-    
-    
-    search = $("#search").val();
-    
-    $("#search-display").text(search);
-    
-    
-    dataRef.ref().push({
-    search:search,
-    
-    });
-    
-    });
+
     dataRef.ref().on("child_added", function (childSnapshot){
     
-      var searchLast = childSnapshot.val().search;
     
-             $("#pre-Search").append(
-         "<span>"+ "<a href='" + "data-name=" + '"'+ value + '"' + "'>'" + searchLast  +"</a>"+ "</span>" + ",&nbsp;");
+      var gameID = childSnapshot.val().name;
+      var searchedID = childSnapshot.val().appid;
+  
+             $("#pre-Search").append(`
+          <span> <a href="#" data-name=${gameID} data-appid=${searchedID}> ${gameID} </a></span>`);
+     
          
          });
