@@ -189,6 +189,43 @@ $("#search-modal").on("click", '.game-link', function() {
         var index = content.indexOf(appID);
         console.log("index: " + index);
     });
+
+    //     //YouTube Api request. "q" is the word search paramenter
+//     $.get(
+//         "https://www.googleapis.com/youtube/v3/search", {
+//             part: "snippet, id",
+//             q: steamPrevious,
+//             type: "video",
+//             maxResults: "1",
+//             key: "AIzaSyCwdYAWeOqZuqkqKwb1d0ZCzUrIDNZYDSw"},
+//             function(data){
+            
+//                 console.log(data);
+
+//                 $.each(data.items, function(i, item){
+                    
+//                     //get output
+//                     var output = getOutput(item);
+
+//                     //display results onto html
+//                     $('#video').text(output);
+//                 });
+
+//             }
+//         // }
+//     );
+
+//     //build output function
+//     function getOutput(item){
+
+//         //grabbing the video ID from youtube API
+//         var videoId = item.id.videoId;
+
+//         //grabbing the src from the video ID and changing it to what is needed
+//         var output = $('#video').attr("src", "https://www.youtube.com/watch?v="+videoId);
+
+//         return output;
+//     }
 });
 
 //close the search modal
