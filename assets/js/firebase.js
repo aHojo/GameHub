@@ -17,15 +17,29 @@
       var gameID = childSnapshot.val().name;
       var searchedID = childSnapshot.val().appid;
       console.log("SearchID " + gameID);
-              var a = $('<a>');
-              a.attr({
-                "href": "#",
-                "class": 'wishlist',
-                "data-name": gameID,
-                "data-appid": searchedID
-              });
-              a.text(gameID);
+              // var a = $('<a>');
+              // a.attr({
+              //   "href": "#",
+              //   "class": 'wishlist',
+              //   "data-name": gameID,
+              //   "data-appid": searchedID
+              // });
+              // a.text(gameID);
               
-             $("#pre-Search").append(a);
+              var newOption = $("<option>");
+              newOption.attr("value", gameID);
+              newOption.attr("href", '#');
+              newOption.attr("data-appid", searchedID);
+              newOption.text(gameID);
+            //  $("#pre-Search").append(a);
+             $("#previousSearch").append(newOption);
+
+             var removal = [];
+             $('datalist option').each(function () {
+               if (removal[this.value]) {
+                $(this).remove()
+               }
+              removal[this.value] = true;
+             })
       });
         //  <span> <a href="#" class='wishlist' data-name=${steamPrevious} data-appid=${searchedID}> ${gameID} </a></span>`);
