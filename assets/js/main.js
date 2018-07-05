@@ -2,6 +2,7 @@ var ofAge = false;
 var content = [];
 var matches = [];
 var steamPrevious;
+var videoId;
 
 //API VARIABLES
 const STEAM = "https://store.steampowered.com/api/appdetails/?appids=";
@@ -137,15 +138,15 @@ const getAppInfo = function(response) {
         var steamScore = "No Score Available"
     }
 
-    if(steamInfo.hasOwnProperty('movies')) {
-        var steamMovie = steamInfo.movies[0].webm.max;
-    }
+    // if(steamInfo.hasOwnProperty('movies')) {
+    //     var steamMovie = steamInfo.movies[0].webm.max;
+    // }
 
     $("#gametitle").attr({"data-name": steamName, "data-appid": steamAppId}).text(steamName);
     $("#metacritic").text(`Metacritic Score: ${steamScore}`);
     $("#age").text(`Required Age: ${steamAge}`);
     $('#headerimg').attr('src', steamLogo);
-    $('#video').attr('src', steamMovie);
+    // $('#video').attr('src', steamMovie);
     $('#gameimage1').attr('src', steamScreenshot);
     $('#gameimage2').attr('src', steamScreenshot1);
     $('#gamedescription').html(`${steamAbout}`);
@@ -174,9 +175,10 @@ const getAppInfo = function(response) {
 
 //clicking on a search item
 $("#search-modal").on("click", '.game-link', function() {
-
-    appID = $(this).attr('data-appid');
-   steamPrevious = $(this).attr('data-name');
+    
+appID = $(this).attr('data-appid');
+steamPrevious = $(this).attr('data-name');
+console.log("steam " + steamPrevious);
    dataRef.ref().push({
        name: steamPrevious,
        appid: appID
@@ -189,43 +191,26 @@ $("#search-modal").on("click", '.game-link', function() {
         var index = content.indexOf(appID);
         console.log("index: " + index);
     });
-
+    youtubeCall();
     //     //YouTube Api request. "q" is the word search paramenter
-//     $.get(
-//         "https://www.googleapis.com/youtube/v3/search", {
-//             part: "snippet, id",
-//             q: steamPrevious,
-//             type: "video",
-//             maxResults: "1",
-//             key: "AIzaSyCwdYAWeOqZuqkqKwb1d0ZCzUrIDNZYDSw"},
-//             function(data){
-            
-//                 console.log(data);
+    // $.get(
+    //     "https://www.googleapis.com/youtube/v3/search", {
+    //         part: "snippet, id",
+    //         q: steamPrevious,
+    //         type: "video",
+    //         maxResults: "1",
+    //         key: "AIzaSyCwdYAWeOqZuqkqKwb1d0ZCzUrIDNZYDSw"},
+    //         function(data){
+    //             console.log(data);
+    //             var youtubeRef = data.items[0]
+                
+    //             videoId = youtubeRef.id.videoId
+    //             console.log("Vid ID:" + videoId);
+    //             var vid = "https://www.youtube.com/embed/" + videoId + "?rel=0";
+    //             $('#video').attr('src', vid);
 
-//                 $.each(data.items, function(i, item){
-                    
-//                     //get output
-//                     var output = getOutput(item);
-
-//                     //display results onto html
-//                     $('#video').text(output);
-//                 });
-
-//             }
-//         // }
-//     );
-
-//     //build output function
-//     function getOutput(item){
-
-//         //grabbing the video ID from youtube API
-//         var videoId = item.id.videoId;
-
-//         //grabbing the src from the video ID and changing it to what is needed
-//         var output = $('#video').attr("src", "https://www.youtube.com/watch?v="+videoId);
-
-//         return output;
-//     }
+    //         }
+    // );
 });
 
 //close the search modal
@@ -236,7 +221,7 @@ $('#close-btn').on("click", function() {
 //wishilist/recentsearch click
 $(document).on('click', '.wishlist', function() {
     console.log("clicked on wishlist " + $(this).attr('data-appid'));
-
+    steamPrevious = $(this).attr('data-name');
     appID = $(this).attr('data-appid');
 
     // var wishID = $(this).attr('data-appid');
@@ -244,4 +229,5 @@ $(document).on('click', '.wishlist', function() {
         url: STEAM + appID,
         method: "GET",
     }).then(getAppInfo);
+    youtubeCall();
 })
