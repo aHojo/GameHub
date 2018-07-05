@@ -157,16 +157,16 @@ const getAppInfo = function(response) {
 
 
     if (steamScore >= 75) {
-        document.getElementById("metacritic").style.backgroundColor = 'green';
+        document.getElementById("metacritic-icon").style.backgroundColor = 'green';
         }
-    else if (steamScore <= 60) {
-       document.getElementById("metacritic").style.backgroundColor = 'yellow';
+   else if (steamScore >= 60 && steamScore < 75) {
+       document.getElementById("metacritic-icon").style.backgroundColor = 'yellow';
        }
-    else if (steamScore <= 50) {
-       document.getElementById("metacritic").style.backgroundColor = 'red';
+   else if (steamScore <= 50 && steamScore < 60) {
+       document.getElementById("metacritic-icon").style.backgroundColor = 'red';
        }
-    else {
-    document.getElementById("metacritic").style.backgroundColor = '#fff';
+    else{
+        document.getElementById("metacritic-icon").style.backgroundColor = '#FFF';
     }
 
     $("#main-container").show();
