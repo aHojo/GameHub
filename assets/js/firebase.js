@@ -16,9 +16,16 @@
 
       var gameID = childSnapshot.val().name;
       var searchedID = childSnapshot.val().appid;
-
-             $("#pre-Search").append(`
-          <span> <a href="#" class='wishlist' data-name=${gameID} data-appid=${searchedID}> ${gameID} </a></span>`);
-
-
-         });
+      console.log("SearchID " + gameID);
+              var a = $('<a>');
+              a.attr({
+                "href": "#",
+                "class": 'wishlist',
+                "data-name": gameID,
+                "data-appid": searchedID
+              });
+              a.text(gameID);
+              
+             $("#pre-Search").append(a);
+      });
+        //  <span> <a href="#" class='wishlist' data-name=${steamPrevious} data-appid=${searchedID}> ${gameID} </a></span>`);
