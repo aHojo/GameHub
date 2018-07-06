@@ -8,7 +8,7 @@ var videoId;
 const STEAM = "https://store.steampowered.com/api/appdetails/?appids=";
 var appID;
 var appIDForLink;
-// var visits = 0;
+
 var visits = parseInt(localStorage.getItem("visited"), 10);;
 visits_count = visits? visits+1:1;
 localStorage.setItem("visited", visits_count);
@@ -16,7 +16,7 @@ localStorage.setItem("visited", visits_count);
 
 $(document).ready(function() {
     console.log(localStorage.getItem("visited"));
-    if(parseInt(localStorage.getItem("visited"), 10) > 5){
+    if(parseInt(localStorage.getItem("visited"), 10) >= 5){
         localStorage.setItem('ofAge', false);
     }
 
