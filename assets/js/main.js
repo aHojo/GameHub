@@ -185,12 +185,15 @@ const getAppInfo = function(response) {
     //For Wishlist
     var wishlist = JSON.parse(localStorage.getItem('wishlist'));
     var onWishlist = false;
-    for (var i = 0; i < wishlist.length; i++) {
-        if (wishlist[i] == steamName) {
-            onWishlist = true;
-        }
-    }
 
+    if (wishlist != null) {
+        for (var i = 0; i < wishlist.length; i++) {
+            if (wishlist[i] == steamName) {
+                onWishlist = true;
+            }
+        }    
+    }
+  
     $('#wishlist-already-on-list').empty();
     $('#wishlist-button-holder').hide();
 
