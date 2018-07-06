@@ -199,7 +199,7 @@ html {
 }
 
 .ofAgeTxt {
-    color: #34113F;
+    color: rgb(110, 25, 136);
     font-weight: bold;
     font-family: 'Tangerine', serif;
 }
@@ -294,6 +294,56 @@ border: 1px solid #fff;
 
 #requirements {
     line-height: 1.5rem;
+    font-weight: bold;
+}
+
+/* CSS for dimming background */
+#video {
+    z-index: 11;
+}
+
+#shadow {
+    background-image:url('../img/shade1x1.png'); 
+    position:absolute; 
+    left:0; 
+    top:0; 
+    width:100%; 
+    height: 213%;
+    z-index:10;
+}
+
+#command { 
+    position:relative; 
+    height:25px; 
+    display:block; 
+    margin: 10px 0 -50px -20px;
+    
+}
+
+.lightSwitcher {
+    /* color: #FFCB47; */
+    position:absolute; 
+    z-index:101;  
+    background-repeat:no-repeat; 
+    background-position:left; 
+    padding: 0 0 0 20px; 
+    outline:none; 
+    text-decoration:none;
+}
+
+.lightSwitcher:hover {
+    text-decoration:underline;
+}
+
+.turnedOff {
+    color:#ffff00;
+}
+
+
+#wishlist-button {
+    position: relative;
+    margin-top: 50px;
+    background-color: darkgreen;
 }
 
 @keyframes modalopen{
