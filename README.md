@@ -14,13 +14,13 @@ In order for GameHub to properly function, the user must install the Chrome Exet
  <br />
 To do so, search **CORS Toggle** in the Chrome Web Store.
  <br />
-<img src="assets/img/cors-1">
+<img src="assets/img/cors-1.png">
  <br />
 Once the extension is found, click on **ADD TO CHROME** to complete the installation process.
-<img src="assets/img/cors-2">
+<img src="assets/img/cors-2.png">
  <br />
 Make sure to check whether or not the extension is working properly in settings.
-<img src="assets/img/cors-3">
+<img src="assets/img/cors-3.png">
 
 ## Installing
 What's needed. Step by step on how to install?
