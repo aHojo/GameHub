@@ -22,16 +22,32 @@ Once the extension is found, click on **ADD TO CHROME** to complete the installa
 Make sure to check whether or not the extension is working properly in settings.
 <img src="assets/img/cors-3.png">
 
-## Installing
-What's needed. Step by step on how to install?
+## Usage
+After performing a <a href="https://help.github.com/articles/cloning-a-repository/">git clone</a>, the user will be allowed to able to access GameHub.
+<br />
+**Searching for your game**<br />
+Type which game you would like to find in the search field<br />
+<img src="assets/img/gamehub-search.png"><br />
+After clicking submit, you will be presented with optitions matching the text you put in. Select which one you would like.<br />
+<img src="assets/img/gamehub-search-2.png"><br />
+
+**Wishlist**<br />
+Once you are able to find the game you want, you are able to add it to your wishlist by clicking on the button below.<br />
+<img src="assets/img/gamehub-wishlist.png"><br />
+To see if it was added correctly, you can click on Wishlist in the top right corner of the page.<br />
+<img src="assets/img/gamehub-wishlist-2.png"><br />
+**Contacting GameHub**<br />
+If you would like to contact GameHub, a contact form is provided. All inputs are recieved by us.<br />
+<img src="assets/img/gamehub-contact.png"><br />
 
 ## Built With
 GameHub was created with the following APIs, Libaries and Databases:<br />
-<a href="https://steamcommunity.com/dev">Steam API</a> <br />
-<a href="https://developers.google.com/youtube/">YouTube API</a> <br />
-<a href="https://fonts.google.com/">Google Fonts</a> <br />
-<a href="https://daneden.github.io/animate.css/">Animate.CSS</a> <br />
-<a href="https://firebase.google.com/">Firebase</a>
+*<a href="https://steamcommunity.com/dev">Steam API</a> <br />
+*<a href="https://developers.google.com/youtube/">YouTube API</a> <br />
+*<a href="https://getbootstrap.com/">Bootstrap v4.1.1</a><br />
+*<a href="https://fonts.google.com/">Google Fonts</a> <br />
+*<a href="https://daneden.github.io/animate.css/">Animate.CSS</a> <br />
+*<a href="https://firebase.google.com/">Firebase</a>
 
 ## Authors
 Andrew Hojonowski, Cong Nguyen, Megan Pellegrino-Zubricky, and Justin Verterano
