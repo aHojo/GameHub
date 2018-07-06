@@ -20,11 +20,11 @@ Make sure to check whether or not the extension is working properly in settings.
 <img src="assets/img/cors-3.png">
 
 ## Usage
-After performing a <a href="https://help.github.com/articles/cloning-a-repository/">**git clone**</a>, the user will be allowed to able to access GameHub.
+After performing a <a href="https://help.github.com/articles/cloning-a-repository/">**git clone**</a>, the user will be able to access GameHub.
 <br />
 <br />
-**Searching for your game**<br />
-Type which game you would like to find in the search field<br />
+**Searching for a game**<br />
+The user will type which game they would like to find into search field<br />
 <img src="assets/img/gamehub-search.png"><br />
 Once the user has clicked submit, they will be presented with selectable options matching the text they put in.<br />
 <img src="assets/img/gamehub-search-2.png"><br />
@@ -52,5 +52,5 @@ GameHub was created with the following APIs, Libaries and Databases:<br />
 Andrew Hojonowski, Cong Nguyen, Megan Pellegrino-Zubricky, and Justin Verterano
 
 ## License and or Acknowledgements
-Logo Icon credited to <a href="http://www.iconarchive.com/show/nuoveXT-2-icons-by-saki/Apps-preferences-system-windows-icon.html">NuoveXT 2 Icon Set</a>. <br />
-Logo created with <a href="https://www.1001fonts.com/liquid-font.html">Liquid Font</a>.
+Logo Icon credited to <a href="http://www.iconarchive.com/show/nuoveXT-2-icons-by-saki/Apps-preferences-system-windows-icon.html">NuoveXT 2 Icon Set</a> <br />
+Logo created with <a href="https://www.1001fonts.com/liquid-font.html">Liquid Font</a>
