@@ -10,8 +10,10 @@ Instructions to get a copy of the project up and running on your local machine f
 In order for GameHub to properly function, the user must install the Chrome Exetension CORS Toogle.
 To do so, search CORS Toggle in the Chrome Web Store.
 <img src="https://i.imgur.com/vql5CQa.png">
+
 Once the extension is found, click on 'ADD TO CHROME' to complete the installation process.
 <img src="https://i.imgur.com/NbghfNq.png">
+
 Make sure to check whether or not the extension is working properly in settings.
 <img src="https://i.imgur.com/PsmpLXg.png">
 
