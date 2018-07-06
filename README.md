@@ -7,7 +7,7 @@ GameHub was designed for those who
 3. to see if a specific game is appropriate for their child based on graphics and ratings
 
 ## Prerequisites
-In order for GameHub to properly function, the user must install the Chrome Exetension CORS Toogle.
+In order for GameHub to properly function, the user must install the Chrome Extension CORS Toggle.
  <br />
 To do so, search **CORS Toggle** in the Chrome Web Store.
  <br />
@@ -36,11 +36,11 @@ To see if it was added correctly, they can click on 'My Wishlist' in the top rig
 <img src="assets/img/gamehub-wishlist-2.png"><br />
 <br />
 **Contacting GameHub**<br />
-If the user would like to contact GameHub, a contact form is provided. All inputs are recieved and reviewed by us.<br />
+If the user would like to contact GameHub, a contact form is provided. All inputs are received and reviewed by us.<br />
 <img src="assets/img/gamehub-contact.png"><br />
 
 ## Built With
-GameHub was created with the following APIs, Libaries and Databases:<br />
+GameHub was created with the following APIs, Libraries and Databases:<br />
 *<a href="https://steamcommunity.com/dev">Steam API</a> <br />
 *<a href="https://developers.google.com/youtube/">YouTube API</a> <br />
 *<a href="https://getbootstrap.com/">Bootstrap v4.1.1</a><br />
