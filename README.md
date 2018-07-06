@@ -14,13 +14,13 @@ In order for GameHub to properly function, the user must install the Chrome Exet
  <br />
 To do so, search **CORS Toggle** in the Chrome Web Store.
  <br />
-<img src="https://i.imgur.com/vql5CQa.png">
+<img src="https://i.imgur.com/a6sSu5q.png">
  <br />
 Once the extension is found, click on **ADD TO CHROME** to complete the installation process.
-<img src="https://i.imgur.com/2vqdMkv.png">
+<img src="https://i.imgur.com/H8Q4lhc.png">
  <br />
 Make sure to check whether or not the extension is working properly in settings.
-<img src="https://i.imgur.com/4Znwhbh.png">
+<img src="https://i.imgur.com/2b6Suty.png">
 
 ## Installing
 What's needed. Step by step on how to install?
@@ -38,4 +38,4 @@ Andrew Hojonowski, Cong Nguyen, Megan Pellegrino-Zubricky, and Justin Verterano
 
 ## License and or Acknowledgements
 Logo Icon credited to <a href="http://www.iconarchive.com/show/nuoveXT-2-icons-by-saki/Apps-preferences-system-windows-icon.html">NuoveXT 2 Icon Set</a>. <br />
-Logo Font created with <a href="https://www.1001fonts.com/liquid-font.html">Liquid Font</a>.
+Logo created with <a href="https://www.1001fonts.com/liquid-font.html">Liquid Font</a>.
