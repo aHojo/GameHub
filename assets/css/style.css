@@ -292,6 +292,9 @@ border: 1px solid #fff;
     bottom: 10%;
 }
 
+#requirements {
+    line-height: 1.5rem;
+}
 
 @keyframes modalopen{
     from {opacity: 0}

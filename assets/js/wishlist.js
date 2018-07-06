@@ -1,4 +1,4 @@
-$("#wishlist-button").click(function() {
+$("#wishlist-button").click(function () {
     var wishlist = JSON.parse(localStorage.getItem('wishlist'));
 
     var gameToAdd = $("#wishlist-button").attr("gametitle");
@@ -25,7 +25,7 @@ $("#wishlist-button").click(function() {
     $('#wishlist-already-on-list').append('<p class="onwishlist">This game is on your wishlist</p>');
 });
 
-$(document).ready(function() {
+$(document).ready(function () {
     setUpWishlist();
 });
 
@@ -39,15 +39,15 @@ function setUpWishlist() {
     }
 
     for (var i = 0; i < wishlist.length; i++) {
-        $("#wishlist-games").append('<input type="checkbox" class="wishlist-checkbox" game="'+wishlist[i]+'">');
-        $("#wishlist-games").append('<span for="wishgame" class="wishlistgamename">'+wishlist[i]+'</span>');
+        $("#wishlist-games").append('<input type="checkbox" class="wishlist-checkbox" game="' + wishlist[i] + '">');
+        $("#wishlist-games").append('<span for="wishgame" class="wishlistgamename">' + wishlist[i] + '</span>');
         $("#wishlist-games").append('<br>');
-    } 
+    }
 }
 
-$("#deletewish").click(function() {
+$("#deletewish").click(function () {
     var gamesToDelete = [];
-    $('#wishlist-games input:checked').each(function() {
+    $('#wishlist-games input:checked').each(function () {
         gamesToDelete.push($(this).attr('game'));
     });
 
@@ -63,4 +63,3 @@ $("#deletewish").click(function() {
 
     setUpWishlist();
 });
-
