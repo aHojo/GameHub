@@ -3,13 +3,13 @@ GameHub serves as the central hub for both gamers and those who want to learn mo
 
 GameHub was designed for those who
 1. want to visit a gaming website that is primarialy visual
-2. are looking for a quick metacritic review
+2. are looking for a quick Metacritic review
 3. to see if a specific game is appropriate for their child based on graphics and ratings
 
 ## Prerequisites
 In order for GameHub to properly function, the user must install the Chrome Extension CORS Toggle.
  <br />
-To do so, search **CORS Toggle** in the Chrome Web Store.
+To do so, search <a href="https://chrome.google.com/webstore/detail/cors-toggle/jioikioepegflmdnbocfhgmpmopmjkim?hl=en">**CORS Toggle**</a> in the Chrome Web Store.
  <br />
 <img src="assets/img/cors-1.png">
  <br />
