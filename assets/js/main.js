@@ -134,10 +134,7 @@ const getAppInfo = function(response) {
     var steamName = steamInfo.name;
     var steamLogo = steamInfo.header_image;
     var steamAge = steamInfo.required_age;
-
-    var steamScreenshot = steamInfo.screenshots[0].path_full;
-    var steamScreenshot1 = steamInfo.screenshots[1].path_full;
-    var steamScreenshot2 = steamInfo.screenshots[2].path_full;
+    
     var steamAbout = steamInfo.short_description;
     var steamPrice = steamInfo.price_overview.final + steamInfo.price_overview.currency;
     var steamWeb = steamInfo.website;
@@ -150,15 +147,22 @@ const getAppInfo = function(response) {
         var steamScore = "No Score Available"
     }
 
-    // if(steamInfo.hasOwnProperty('movies')) {
-    //     var steamMovie = steamInfo.movies[0].webm.max;
-    // }
+    if(steamInfo.screenshots[0].path_full !== undefined){
+        var steamScreenshot = steamInfo.screenshots[0].path_full;
+    }
+    if(steamInfo.screenshots[1].path_full !== undefined){
+        var steamScreenshot1 = steamInfo.screenshots[1].path_full;
+    }
+
+    if(steamInfo.screenshots[2].path_full !== undefined){
+        var steamScreenshot1 = steamInfo.screenshots[2].path_full;
+    }
+
 
     $("#gametitle").attr({"data-name": steamName, "data-appid": steamAppId}).text(steamName);
     $("#metacritic").text(`Metacritic Score: ${steamScore}`);
     $("#age").text(`Required Age: ${steamAge}`);
     $('#headerimg').attr('src', steamLogo);
-    // $('#video').attr('src', steamMovie);
     $('#gameimage1').attr('src', steamScreenshot);
     $('#gameimage2').attr('src', steamScreenshot1);
     $('#gamedescription').html(`${steamAbout}`);
@@ -169,16 +173,16 @@ const getAppInfo = function(response) {
 
 
     if (steamScore >= 75) {
-        document.getElementById("metacritic").style.backgroundColor = 'green';
+        document.getElementById("metacritic-icon").style.backgroundColor = 'green';
         }
-    else if (steamScore <= 60) {
-       document.getElementById("metacritic").style.backgroundColor = 'yellow';
+   else if (steamScore >= 60 && steamScore < 75) {
+       document.getElementById("metacritic-icon").style.backgroundColor = 'yellow';
        }
-    else if (steamScore <= 50) {
-       document.getElementById("metacritic").style.backgroundColor = 'red';
+   else if (steamScore <= 50 && steamScore < 60) {
+       document.getElementById("metacritic-icon").style.backgroundColor = 'red';
        }
-    else {
-    document.getElementById("metacritic").style.backgroundColor = '#fff';
+    else{
+        document.getElementById("metacritic-icon").style.backgroundColor = '#FFF';
     }
 
     $("#main-container").show();
@@ -204,25 +208,6 @@ console.log("steam " + steamPrevious);
         console.log("index: " + index);
     });
     youtubeCall();
-    //     //YouTube Api request. "q" is the word search paramenter
-    // $.get(
-    //     "https://www.googleapis.com/youtube/v3/search", {
-    //         part: "snippet, id",
-    //         q: steamPrevious,
-    //         type: "video",
-    //         maxResults: "1",
-    //         key: "AIzaSyCwdYAWeOqZuqkqKwb1d0ZCzUrIDNZYDSw"},
-    //         function(data){
-    //             console.log(data);
-    //             var youtubeRef = data.items[0]
-                
-    //             videoId = youtubeRef.id.videoId
-    //             console.log("Vid ID:" + videoId);
-    //             var vid = "https://www.youtube.com/embed/" + videoId + "?rel=0";
-    //             $('#video').attr('src', vid);
-
-    //         }
-    // );
 });
 
 //close the search modal
