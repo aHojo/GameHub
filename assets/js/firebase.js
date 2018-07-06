@@ -10,13 +10,15 @@
           };
           firebase.initializeApp(config);
           var dataRef = firebase.database();
+	var removal = [];
 
     dataRef.ref().on("child_added", function (childSnapshot){
 
 
       var gameID = childSnapshot.val().name;
       var searchedID = childSnapshot.val().appid;
-      console.log("SearchID " + gameID);
+      
+      
               // var a = $('<a>');
               // a.attr({
               //   "href": "#",
@@ -32,15 +34,19 @@
               newOption.attr("data-appid", searchedID);
               newOption.text(gameID);
             //  $("#pre-Search").append(a);
-             $("#previousSearch").append(newOption);
-
-             var removal = [];
-             $('datalist option').each(function () {
-               if (removal[this.value]) {
-                $(this).remove()
-               }
-              removal[this.value] = true;
-             })
+             console.log("game ID" + gameID + "\n");
+             if(removal.indexOf(gameID)	=== -1){ 
+				removal.push(gameID);
+				$("#previousSearch").append(newOption);
+				console.log("removal " + removal);
+             }
+            //  var removal = [];
+            //  $('datalist option').each(function () {
+            //    if (removal[this.value]) {
+            //     $(this).remove()
+            //    }
+            //   removal[this.value] = true;
+            //  })
       });
 
 
