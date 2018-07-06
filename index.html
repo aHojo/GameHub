@@ -42,7 +42,7 @@
                         <a class="nav-link" href="contact.html">Contact</a>
                     </li>
                 </ul>
-                <button class="btn btn-outline">Wishlist</button>
+                <button class="btn btn-outline"> <a class="nav-link" href="wishlist.html">My Wishlist</a></button>
             </div>
         </nav>
     </header>
@@ -56,7 +56,7 @@
                 <div class="modal-body">
                     <div class="form-check">
                         <input type="checkbox" class="form-check-input" id="ofAgeCheck">
-                        <label class="form-check-label" for="ofAgeCheck">Please check the box to inicate if you are 18 or older.</label>
+                        <label class="form-check-label" for="ofAgeCheck">Please check the box to indicate if you are 18 or older.</label>
                     </div>
                 </div>
                 <div class="modal-footer">
@@ -107,6 +107,12 @@
                 <h1 id="gametitle">-GameTitle</h1>
                 <h2 id="metacritic">-metacritic</h2> <span id="metacritic-icon">&nbsp;</span></br>
                 <h2 id="age">-age</h2>
+                <div id="wishlist-button-holder">
+                    <button type="button" class="btn btn-dark" id="wishlist-button">Add to Wishlist</button>
+                </div>
+                <div id="wishlist-already-on-list">
+
+                </div>
             </div>
             <div class="col-12 col-md-4">
                 <img id="headerimg" class="img-fluid" src="https://steamcdn-a.akamaihd.net/steam/apps/460920/header.jpg?t=1515406308" />
@@ -188,6 +194,7 @@
     <script src="assets/js/main.js"></script>
     <script src="assets/js/youtube.js"></script>
     <script src="assets/js/firebase.js"></script>
+    <script src="assets/js/wishlist.js"></script>
 </body>
 
 </html>

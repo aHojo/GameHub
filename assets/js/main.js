@@ -171,6 +171,24 @@ const getAppInfo = function(response) {
     $('#requirements').html(`System Requirements: ${steamReqs}`);
     $('#search-modal').modal('hide');
 
+    //For Wishlist
+    var wishlist = JSON.parse(localStorage.getItem('wishlist'));
+    var onWishlist = false;
+    for (var i = 0; i < wishlist.length; i++) {
+        if (wishlist[i] == steamName) {
+            onWishlist = true;
+        }
+    }
+
+    $('#wishlist-already-on-list').empty();
+    $('#wishlist-button-holder').hide();
+
+    if (onWishlist == true) {
+        $('#wishlist-already-on-list').append('<p class="onwishlist">This game is on your wishlist</p>');
+    } else {
+        $('#wishlist-button').attr('gametitle', steamName);
+        $('#wishlist-button-holder').show();
+    }
 
     if (steamScore >= 75) {
         document.getElementById("metacritic-icon").style.backgroundColor = 'green';
