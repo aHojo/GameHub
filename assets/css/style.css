@@ -44,6 +44,18 @@ html {
     margin-top: 15px;
 }
 
+.wishBtn {
+    border: 1px darkgray solid;
+    height: 40px;
+    width: 110px;
+    font-size: 14px;
+}
+
+.wishText {
+    margin-left: -10px;;
+    margin-top: -4px;
+}
+
 .img-fluid {
     margin-top: 10px;
     padding: 10px;
@@ -54,9 +66,7 @@ html {
     bottom: 0;
     width: 100%;
     height: 60px;
-
     background: linear-gradient( to left, #897292, #3E78B2,	#D8BFD8, #fb88ff);
-
 }
 
 .nav-link {
@@ -137,7 +147,13 @@ html {
     font-family: 'Oxygen', sans-serif;
     color: white;
     background-color: #3E78B2;
+    margin-left: 75%;
+    margin-bottom: -63px;
+    height: 35px;
+    border: 1px solid darkgray;
 }
+
+
 
 /* modal style */
 .modal {
@@ -148,41 +164,67 @@ html {
     height: 100%;
     width: 100%;
     overflow: auto;
-    background-color: rgba(0,0,0,0.5)
+    background-color: rgba(0,0,0,0.5);
 }
+
 #ofAgeModalContent{
     background-color: #f4f4f4;
     margin: 20% auto;
-    /* padding: 20px; */
     width: 70%;
     box-shadow: 0 5px 8px 0 rgba(0,0,0,0.2),0 7px 20px 0 rgba(0, 0, 0, 0.17);
     animation-name: modalopen;
     animation-duration: 1s;
+    border: 1px darkgray solid;
 }
+
 .modal-header{
-    background-color: coral;
+    background-color: #8272CC;
     padding: 15px;
     color: white;
 }
+
 .modal-body {
     padding: 10px 20px;
+    height: 75px;
 }
+
+.bnb {
+    margin-top: 10px;
+}
+
+/* checkbox */
+.chkBox {
+    margin-left: -25px;
+    margin-top: 20px;
+}
+
+.ofAgeTxt {
+    color: #34113F;
+    font-weight: bold;
+    font-family: 'Tangerine', serif;
+}
+
+/* this is confirm button ID. Make changes here if needed to move around */
 #ofAgeBtn{
     text-align: center;
     background: #3E78B2;
-    padding: 1em 2em;
+    padding: auto;
     color: white;
     border:1px solid white;
+    height: 35px;
+  
 }
+
 .modal-footer{
-    background-color: coral;
+    background-color: #8272CC;
     padding: 10px;
     color:white;
     text-align: center;
+    height: 45px;
 }
 
 #ofAgeBtn:hover{
-    background: black;
+    background: red;
 }
 
 .card-header {
@@ -248,4 +290,10 @@ border: 1px solid #fff;
 #gameurl{
     position: absolute;
     bottom: 10%;
+}
+
+
+@keyframes modalopen{
+    from {opacity: 0}
+    to {opacity: 1}
 }
