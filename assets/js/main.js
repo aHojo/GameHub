@@ -9,33 +9,48 @@ const STEAM = "https://store.steampowered.com/api/appdetails/?appids=";
 var appID;
 var appIDForLink;
 
+var visits = parseInt(localStorage.getItem("visited"), 10);;
+visits_count = visits? visits+1:1;
+localStorage.setItem("visited", visits_count);
+
+
 $(document).ready(function() {
+    console.log(localStorage.getItem("visited"));
+    if(parseInt(localStorage.getItem("visited"), 10) >= 5){
+        localStorage.setItem('ofAge', false);
+    }
+
     if(!JSON.parse(localStorage.getItem('ofAge'))){
         $('#ofAgeModal').modal({
             keyboard: false,
             backdrop: 'static'
         });
         $('#ofAgeModal').modal('show');
-
-            $('#ofAgeCheck').on("click", function(){
-                if (this.checked) {
-                    localStorage.setItem("ofAge", true);
-                    // ofAge = true;
-                    console.log("Checked");
-                } else {
-                    // ofAge = false;
-                    localStorage.setItem("ofAge", false);
-                    console.log("Unchecked");
-                }
-            });
+        
+        localStorage.setItem('visited', visits);
+        
+        $('#ofAgeCheck').on("click", function(){
+            if (this.checked) {
+                localStorage.setItem("ofAge", true);
+                // ofAge = true;
+                console.log("Checked");
+            } else {
+                // ofAge = false;
+                localStorage.setItem("ofAge", false);
+                console.log("Unchecked");
+            }
+        });
 
 
             $('#ofAgeBtn').on("click", function() {
                 if(JSON.parse(localStorage.getItem('ofAge'))){
-                    $('#ofAgeModal').modal('hide')
+                    localStorage.setItem("visited", 0);
+                    console.log(localStorage.getItem("visited"));
+                    $('#ofAgeModal').modal('hide');
                 }
             });
     }
+    
 })
 
 
@@ -80,7 +95,7 @@ function gameName() {
                 console.log(response);
                 console.log('Name:' + matches[i].name + "\n" + "Appid: " + matches[i].appid);
                 var steamLink = response[matches[i].appid].data;
-                // console.log("SteamLink" + steamLink.name);
+
                 if(steamLink){
                     var searches = $('<div>');
                     var anchor = $('<a>');
@@ -92,11 +107,8 @@ function gameName() {
                     anchor.attr('data-appid', matches[i].appid);
                     anchor.attr('data-name', matches[i].name);
                     p.addClass("card-text");
-                    // searches.html(`${steamLink.name} <br /> ${steamLink.short_description}`);
                     searches.append(anchor, p);
                     searches.addClass('games');
-                    // searches.attr('data-appid', matches[i].appid);
-                    // searches.attr('data-name', matches[i].name);
                     $("#search-content").append(searches);
                 }
             }
