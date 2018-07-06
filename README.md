@@ -6,9 +6,6 @@ GameHub was designed for those who
 2. are looking for a quick metacritic review
 3. to see if a specific game is appropriate for their child based on graphics and ratings
 
-## Getting Started
-Instructions to get a copy of the project up and running on your local machine for development/testing. See deployment for notes on how to deploy the project on a live system. API keys?
-
 ## Prerequisites
 In order for GameHub to properly function, the user must install the Chrome Exetension CORS Toogle.
  <br />
@@ -23,21 +20,23 @@ Make sure to check whether or not the extension is working properly in settings.
 <img src="assets/img/cors-3.png">
 
 ## Usage
-After performing a <a href="https://help.github.com/articles/cloning-a-repository/">git clone</a>, the user will be allowed to able to access GameHub.
+After performing a <a href="https://help.github.com/articles/cloning-a-repository/">**git clone**</a>, the user will be allowed to able to access GameHub.
+<br />
 <br />
 **Searching for your game**<br />
 Type which game you would like to find in the search field<br />
 <img src="assets/img/gamehub-search.png"><br />
-After clicking submit, you will be presented with optitions matching the text you put in. Select which one you would like.<br />
+Once the user has clicked submit, they will be presented with selectable options matching the text they put in.<br />
 <img src="assets/img/gamehub-search-2.png"><br />
-
+<br />
 **Wishlist**<br />
-Once you are able to find the game you want, you are able to add it to your wishlist by clicking on the button below.<br />
+Once they are able to find the game you want, they are able to add it to their wishlist with the button below.<br />
 <img src="assets/img/gamehub-wishlist.png"><br />
-To see if it was added correctly, you can click on Wishlist in the top right corner of the page.<br />
+To see if it was added correctly, they can click on 'My Wishlist' in the top right corner of the page.<br />
 <img src="assets/img/gamehub-wishlist-2.png"><br />
+<br />
 **Contacting GameHub**<br />
-If you would like to contact GameHub, a contact form is provided. All inputs are recieved by us.<br />
+If the user would like to contact GameHub, a contact form is provided. All inputs are recieved and reviewed by us.<br />
 <img src="assets/img/gamehub-contact.png"><br />
 
 ## Built With
