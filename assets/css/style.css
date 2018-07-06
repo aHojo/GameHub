@@ -125,15 +125,6 @@ html {
     background-color: #3E78B2;
 }
 
-/* search modal css */
-/* .games {
-    margin: 10px;
-    border: 2px solid red;
-}
-.games:hover {
-    background: red;
-} */
-
 /* modal style */
 .modal {
     display:none;
@@ -215,4 +206,32 @@ height: 5px;
 padding: 7px;
 margin-left:2px;
 border: 1px solid #fff;    
+}
+
+/* Game title box */
+#gametitle {
+    font-size: 24px;
+    font-family: "Motiva Sans", Sans-serif;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.info-box {
+    border: 3px solid #897292;
+    
+}
+
+#sys-req {
+    border-bottom: 100px !important;
+}
+
+/* position */
+#desc-box{
+    position: relative;
+}
+
+
+#gameurl{
+    position: absolute;
+    bottom: 10%;
 }

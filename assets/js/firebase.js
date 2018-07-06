@@ -18,22 +18,12 @@
       var gameID = childSnapshot.val().name;
       var searchedID = childSnapshot.val().appid;
       
-      
-              // var a = $('<a>');
-              // a.attr({
-              //   "href": "#",
-              //   "class": 'wishlist',
-              //   "data-name": gameID,
-              //   "data-appid": searchedID
-              // });
-              // a.text(gameID);
-              
               var newOption = $("<option>");
               newOption.attr("value", gameID);
               newOption.attr("href", '#');
               newOption.attr("data-appid", searchedID);
               newOption.text(gameID);
-            //  $("#pre-Search").append(a);
+
              console.log("game ID" + gameID + "\n");
              if(removal.indexOf(gameID)	=== -1){ 
 				removal.push(gameID);

@@ -140,21 +140,31 @@ const getAppInfo = function(response) {
     var steamWeb = steamInfo.website;
     var steamReqs = steamInfo.pc_requirements.minimum;
     console.log("Steam App Id" + steamAppId);
-
+    if(steamInfo.website === "null"){
+        console.log("HELLO THIS IS DAWG");
+        var steamWeb = steamInfo.website;
+    } else {
+        var steamWeb = "www.store.steampowered.com";
+    }
+    
     if(steamInfo.hasOwnProperty('metacritic')){
         var steamScore = steamInfo.metacritic.score;
     } else {
         var steamScore = "No Score Available"
     }
 
-    if(steamInfo.screenshots[0].path_full !== undefined){
+    if(steamInfo.screenshots[0].path_full){
         var steamScreenshot = steamInfo.screenshots[0].path_full;
+    } else {
+        $('#gameimage1').empty();
     }
-    if(steamInfo.screenshots[1].path_full !== undefined){
+    if(steamInfo.screenshots[1].path_full){
         var steamScreenshot1 = steamInfo.screenshots[1].path_full;
+    }  else {
+        $('#gameimage2').empty();
     }
 
-    if(steamInfo.screenshots[2].path_full !== undefined){
+    if(steamInfo.screenshots[2].path_full){
         var steamScreenshot1 = steamInfo.screenshots[2].path_full;
     }
 
@@ -166,7 +176,8 @@ const getAppInfo = function(response) {
     $('#gameimage1').attr('src', steamScreenshot);
     $('#gameimage2').attr('src', steamScreenshot1);
     $('#gamedescription').html(`${steamAbout}`);
-    $('#gameurl').text(`Dev Website: ${steamWeb}`);
+    $('#game-link').attr('href', steamWeb);
+    $('#game-link').text(`${steamWeb}`);
     $('#gameprice').text(`Price: ${steamPrice}`);
     $('#requirements').html(`System Requirements: ${steamReqs}`);
     $('#search-modal').modal('hide');
@@ -206,6 +217,7 @@ console.log("steam " + steamPrevious);
         console.log(error);
         var index = content.indexOf(appID);
         console.log("index: " + index);
+        $('#search-modal').modal('hide');
     });
     youtubeCall();
 });
