@@ -10,10 +10,10 @@ Instructions to get a copy of the project up and running on your local machine f
 In order for GameHub to properly function, the user must install the Chrome Exetension CORS Toogle.
 To do so, search CORS Toggle in the Chrome Web Store.
 <img src="https://i.imgur.com/vql5CQa.png">
-
+ <br />
 Once the extension is found, click on 'ADD TO CHROME' to complete the installation process.
 <img src="https://i.imgur.com/NbghfNq.png">
-
+ <br />
 Make sure to check whether or not the extension is working properly in settings.
 <img src="https://i.imgur.com/PsmpLXg.png">
 
@@ -22,9 +22,9 @@ What's needed. Step by step on how to install?
 
 ## Built With
 GameHub was created with the following APIs, Libaries and Databases:
-Steam API
-YouTube API
-Animate.CSS
+Steam API <br />
+YouTube API <br />
+Animate.CSS <br />
 Firebase
 
 ## Authors
