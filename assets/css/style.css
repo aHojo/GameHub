@@ -283,6 +283,11 @@ html {
     margin-top: 50px;
     background-color: darkgreen;
 }
+
+#no-results {
+    margin: 10px;
+}
+
 @keyframes modalopen{
     from {
        opacity: 0
