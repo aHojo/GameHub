@@ -98,7 +98,7 @@ function gameName() {
 
     //If there are not matches display something. 
     if (matches.length === 0) {
-        $("#search-content").html(`<h2>I'm sorry, ${game} is not in our library.</h2>`)
+        $("#search-content").html(`<h2 id="no-results">I'm sorry, ${game} is not in our library.</h2>`)
     }
     for (let i = 0; i < matches.length; i++) {
         appIDForLink = matches[i].appid;

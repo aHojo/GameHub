@@ -346,6 +346,10 @@ border: 1px solid #fff;
     background-color: darkgreen;
 }
 
+#no-results {
+    margin: 10px;
+}
+
 @keyframes modalopen{
     from {opacity: 0}
     to {opacity: 1}
