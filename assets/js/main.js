@@ -179,7 +179,7 @@ const getAppInfo = function (response) {
     if (steamInfo.screenshots[0]) {
         var steamScreenshot = steamInfo.screenshots[0].path_full;
     } else {
-        $('#gameimage1').attr("src", "");
+        $('#gameimage1').attr("src", "http://www.blogforweb.com/wp-content/uploads/2016/05/social-media-gaming-e1463079825431-790x381.jpg");
     }
     if (steamInfo.screenshots[1]) {
         var steamScreenshot1 = steamInfo.screenshots[1].path_full;
