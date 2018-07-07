@@ -11,12 +11,12 @@ var youtubeCall = function() {
             function(data){
                 console.log(data);
                 var youtubeRef = data.items[randNum];
-                
+
                 videoId = youtubeRef.id.videoId
                 console.log("Vid ID:" + videoId);
                 var vid = "https://www.youtube.com/embed/" + videoId + "?rel=0";
                 $('#video').attr('src', vid);
-    
+
             }
     );
 }
