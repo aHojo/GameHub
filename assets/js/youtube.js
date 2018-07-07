@@ -20,3 +20,15 @@ var youtubeCall = function() {
             }
     );
 }
+
+// dim background
+$(document).ready(function(){
+    $("#shadow").css("height", $(document).height()).hide();
+    $(".lightSwitcher").click(function(){
+        $("#shadow").toggle();
+        if ($("#shadow").is(":hidden"))
+            $(this).html("Turn off the lights").removeClass("turnedOff");
+         else
+            $(this).html("Turn on the lights").addClass("turnedOff");
+    });
+});
