@@ -1,30 +1,24 @@
 body {
     margin-bottom: 110px;
-    background-color: #eeeeee; 
+    background-color: #eeeeee;
     font-family: 'Oxygen', sans-serif;
 }
-
 html {
     position: relative;
     min-height: 100%;
 }
-
 .btn-outline {
     color: white;
     background-color: #3E78B2;
 }
-
 .jumbotron {
     background: linear-gradient( to right, #897292, #3E78B2, #D8BFD8, #fb88ff);
 }
-
-
 .info-box {
     padding: 25px;
     border: 1px solid #bbbbbb;
     background-color: white;
 }
-
 .onwishlist {
     color: #3E78B2;
     border: 1px solid pink;
@@ -32,47 +26,40 @@ html {
     margin-top: 10px;
     text-align: center;
 }
-
 .wishlistgamename {
     padding-left: 10px;
     font-size: 18px;
 }
-
 .btn-dark {
     padding: 10px;
     float: left;
     margin-top: 15px;
 }
-
 .wishBtn {
     border: 1px darkgray solid;
     height: 40px;
     width: 110px;
     font-size: 14px;
 }
-
 .wishText {
-    margin-left: -10px;;
+    margin-left: -10px;
+   ;
     margin-top: -4px;
 }
-
 .img-fluid {
     margin-top: 10px;
     padding: 10px;
 }
-
 .footer {
     position: absolute;
     bottom: 0;
     width: 100%;
     height: 60px;
-    background: linear-gradient( to left, #897292, #3E78B2,	#D8BFD8, #fb88ff);
+    background: linear-gradient( to left, #897292, #3E78B2, #D8BFD8, #fb88ff);
 }
-
 .nav-link {
     color: white;
 }
-
 .footer-text {
     color: #000;
     font-weight: bold;
@@ -80,23 +67,19 @@ html {
     line-height: 40px;
 }
 .input-group{
-    width:700px; margin:0 auto;
+    width:700px;
+    margin:0 auto;
     text-align: center;
 }
-
 .btn-default{
-    
     border: none;
     background: none;
     font-weight: bold;
-
 }
-
 .btn:hover {
     -webkit-animation: pulse 1s;
     animation: pulse 1s;
 }
-
 /*contactpage*/
 .contacthead {
     font-size: 36px;
@@ -104,13 +87,11 @@ html {
     font-style: bold;
     color: #3E78B2;
 }
-
 .form-group {
     font-size: 20px;
     font-family: 'Times New Roman', Times, serif;
     color: #897292;
 }
-
 .contactsubmit {
     font-size: 16px;
     font-family: 'Oxygen', sans-serif;
@@ -118,7 +99,6 @@ html {
     background-color: #3E78B2;
     float: right;
 }
-
 /*about page*/
 .aboutheader {
     font-size: 36px;
@@ -126,35 +106,26 @@ html {
     font-style: bold;
     color: #3E78B2;
 }
-
 .abouttext {
     font-size: 16px;
     font-family: Arial, Helvetica, sans-serif;
     line-height: 30px;
     padding: 12px;
-} 
-
+}
 .aboutinfohead {
-    color:  #897292;
+    color: #897292;
     font-family: 'Oxygen', sans-serif;
     margin-top: 3px;
 }
-
-
 /*wishlist*/
 .deletesubmit {
     font-size: 16px;
     font-family: 'Oxygen', sans-serif;
     color: white;
     background-color: #3E78B2;
-    margin-left: 75%;
-    margin-bottom: -63px;
     height: 35px;
     border: 1px solid darkgray;
 }
-
-
-
 /* modal style */
 .modal {
     display:none;
@@ -166,7 +137,6 @@ html {
     overflow: auto;
     background-color: rgba(0,0,0,0.5);
 }
-
 #ofAgeModalContent{
     background-color: #f4f4f4;
     margin: 20% auto;
@@ -176,34 +146,28 @@ html {
     animation-duration: 1s;
     border: 1px darkgray solid;
 }
-
 .modal-header{
     background-color: #8272CC;
     padding: 15px;
     color: white;
 }
-
 .modal-body {
     padding: 10px 20px;
     height: 75px;
 }
-
 .bnb {
     margin-top: 10px;
 }
-
 /* checkbox */
 .chkBox {
     margin-left: -25px;
     margin-top: 20px;
 }
-
 .ofAgeTxt {
     color: rgb(110, 25, 136);
     font-weight: bold;
     font-family: 'Tangerine', serif;
 }
-
 /* this is confirm button ID. Make changes here if needed to move around */
 #ofAgeBtn{
     text-align: center;
@@ -212,9 +176,7 @@ html {
     color: white;
     border:1px solid white;
     height: 35px;
-  
 }
-
 .modal-footer{
     background-color: #8272CC;
     padding: 10px;
@@ -222,19 +184,15 @@ html {
     text-align: center;
     height: 45px;
 }
-
 #ofAgeBtn:hover{
     background: red;
 }
-
 .card-header {
     color: #0000EE !important;
 }
-
 .card-text {
     margin: 10px 0px 5px 10px;
 }
-
 .card-header:hover {
     text-decoration: underline !important;
     cursor: pointer;
@@ -242,28 +200,23 @@ html {
 .games {
     margin: 10px;
 }
-
 #close-btn:hover {
     cursor: pointer;
 }
-
 /* Review Icons */
-
 #metacritic{
-    
     float:left;
     display:inline-block;
 }
 #metacritic-icon{
-float:left;
-display:inline-block;
-width: 5px;
-height: 5px;
-padding: 7px;
-margin-left:2px;
-border: 1px solid #fff;    
+    float:left;
+    display:inline-block;
+    width: 5px;
+    height: 5px;
+    padding: 7px;
+    margin-left:2px;
+    border: 1px solid #fff;
 }
-
 /* Game title box */
 #gametitle {
     font-size: 24px;
@@ -271,75 +224,60 @@ border: 1px solid #fff;
     font-weight: bold;
     margin-bottom: 10px;
 }
-
 .info-box {
     border: 3px solid #897292;
-    
 }
-
 #sys-req {
     border-bottom: 100px !important;
 }
-
 /* position */
 #desc-box{
     position: relative;
 }
-
-
 #gameurl{
     position: absolute;
     bottom: 10%;
 }
-
 #requirements {
     line-height: 1.5rem;
     font-weight: bold;
 }
-
 /* CSS for dimming background */
 #video {
     z-index: 11;
 }
-
 #shadow {
-    background-image:url('../img/shade1x1.png'); 
-    position:absolute; 
-    left:0; 
-    top:0; 
-    width:100%; 
+    background-image:url('../img/shade1x1.png');
+    position:absolute;
+    left:0;
+    top:0;
+    width:100%;
     height: 213%;
     z-index:10;
 }
-
-#command { 
-    position:relative; 
-    height:25px; 
-    display:block; 
+#command {
+    position:relative;
+    height:25px;
+    display:block;
     margin: 10px 0 -50px -20px;
-    
 }
-
 .lightSwitcher {
-    /* color: #FFCB47; */
-    position:absolute; 
-    z-index:101;  
-    background-repeat:no-repeat; 
-    background-position:left; 
-    padding: 0 0 0 20px; 
-    outline:none; 
+   /* color: #FFCB47;
+    */
+    position:absolute;
+    z-index:101;
+    background-repeat:no-repeat;
+    background-position:left;
+    padding: 0 0 0 20px;
+    outline:none;
     text-decoration:none;
 }
-
 .lightSwitcher:hover {
     text-decoration:underline;
 }
-
 .turnedOff {
     color:#ffff00;
 }
-
-
 #wishlist-button {
     position: relative;
     margin-top: 50px;
@@ -351,6 +289,10 @@ border: 1px solid #fff;
 }
 
 @keyframes modalopen{
-    from {opacity: 0}
-    to {opacity: 1}
+    from {
+       opacity: 0
+   }
+    to {
+       opacity: 1
+   }
 }

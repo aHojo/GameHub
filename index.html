@@ -15,13 +15,13 @@
     <link rel="stylesheet" href="assets/css/animate.css">
 
     <title>GameHub</title>
-<style>
-    body {
-        margin-bottom: 110px;
-        background-color: #eeeeee;
-        font-family: 'Oxygen', sans-serif;
-    }
-</style>
+    <style>
+        body {
+            margin-bottom: 110px;
+            background-color: #eeeeee;
+            font-family: 'Oxygen', sans-serif;
+        }
+    </style>
 </head>
 
 <body>
@@ -47,7 +47,6 @@
         </nav>
     </header>
 
-
     <!-- Modal to confirm the age. -->
     <div id="ofAgeModal" class="modal" tabindex="-1" role="dialog">
         <div class="modal-dialog" role="document">
@@ -68,16 +67,16 @@
 
     <!-- Modal to display search results -->
     <div id="search-modal" class="modal fade" tabindex="-2" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-lg">
-                <div class="modal-header">
-                    <button id="close-btn" type="button" class="close" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-              <div id="search-content" class="modal-content"></div>
-              <div class="modal-footer"></div>
+        <div class="modal-dialog modal-lg">
+            <div class="modal-header">
+                <button id="close-btn" type="button" class="close" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
             </div>
-          </div>
+            <div id="search-content" class="modal-content"></div>
+            <div class="modal-footer"></div>
+        </div>
+    </div>
 
     <!-- Where we search for games. -->
     <div class="jumbotron jumbotron-fluid">
@@ -86,12 +85,12 @@
         </div>
     </div>
     <div class="input-group">
-        <input id="game-search" type="text" class="form-control"  list="previousSearch" placeholder="Search for a game...">
+        <input id="game-search" type="text" class="form-control" list="previousSearch" placeholder="Search for a game...">
         <datalist id="previousSearch" class="previousSearch">
             <!-- <option id="pre-Search"> -->
 
         </datalist>
-  <!-- Firebase Testing -->
+        <!-- Firebase Testing -->
         <!-- <button onclick=" removing()">Click me</button> -->
         <span class="input-group-btn">
             <button id="search-button" class="btn btn-default" type="button">Search</button>
@@ -123,17 +122,17 @@
             <a class="lightSwitcher" href="#">Turn off the lights</a>
         </div>
 
-        <div id="player" class="embed-responsive embed-responsive-16by9 mt-5"> <!--embed-responsive embed-responsive-16by9-->
+        <div id="player" class="embed-responsive embed-responsive-16by9 mt-5">
+            <!--embed-responsive embed-responsive-16by9-->
             <iframe id="video" class="embed-responsive-item" src="https://www.youtube.com/embed/YGOu-raM25k?rel=0" allowfullscreen></iframe>
         </div>
-
 
         <div class="row mt-5">
             <div class="col-12 col-md-6">
                 <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-                    <div  class="carousel-inner">
+                    <div class="carousel-inner">
                         <div class="carousel-item active">
-                            <img id="gameimage1"class="d-block w-100" src="https://steamcdn-a.akamaihd.net/steam/apps/460920/ss_871b8c0ec9fd523555e8d0d11d652f82da491894.600x338.jpg?t=1515406308">
+                            <img id="gameimage1" class="d-block w-100" src="https://steamcdn-a.akamaihd.net/steam/apps/460920/ss_871b8c0ec9fd523555e8d0d11d652f82da491894.600x338.jpg?t=1515406308">
                         </div>
                         <div class="carousel-item">
                             <img id="gameimage2" class="d-block w-100" src="https://steamcdn-a.akamaihd.net/steam/apps/460920/ss_3d14c33d2564b2cac04b47accb899d1b2e27e29d.600x338.jpg?t=1515406308">
@@ -188,10 +187,7 @@
 
     <div id="shadow"></div>
 
-    <script
-  src="https://code.jquery.com/jquery-3.3.1.js"
-  integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
-  crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
     <script src="https://www.gstatic.com/firebasejs/5.2.0/firebase.js"></script>
