@@ -140,6 +140,12 @@ var displaySearchContent = function () {
     gameName();
 
 };
+//Search Button Click Enter to Search
+$('#game-search').keypress(function(e){
+    if(e.which == 13) {
+        displaySearchContent();
+    }
+});
 
 $("#search-button").on("click", displaySearchContent)
 
