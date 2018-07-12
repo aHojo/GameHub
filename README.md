@@ -1,4 +1,7 @@
 # GameHub
+##
+#[GameHub](https://amh5366.github.io/GameHub/)
+##
 GameHub serves as the central hub for both gamers and those who want to learn more about games available on Steam. It’s primary goal is to provide and clarify information about the particular game searched by the user. GameHub effectively displays in a visually appealing way specific details of a searched game.
 
 GameHub was designed for those who
